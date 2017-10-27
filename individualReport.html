@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="X-UA-Compatible" content="IE=8">
+<TITLE>INDIVIDUAL REPORT</TITLE>
+<link rel="stylesheet" type="text/css" href="individualReport.css">
+<script src="jquery-3.1.1.min.js"></script>
+<script src="individualReport.js"></script>
+</HEAD>
+
+<BODY onload="initialization()">
+<DIV id="page_1" style="margin: auto">
+<DIV id="p1dimg1">
+<IMG src="scu-engineering-school-logo.gif" alt="LOGO" style="width:100px"></DIV>
+
+
+<DIV class="dclr"></DIV>
+<TABLE cellpadding=0 cellspacing=0 class="t0">
+<TR>
+	<TD class="tr0 td0"><P class="p0 ft0">&nbsp;</P></TD>
+	<TD class="tr0 td1"><P class="p1 ft1">SANTA CLARA UNIVERSITY</P></TD>
+</TR>
+<TR>
+	<TD class="tr1 td0"><P class="p0 ft0">&nbsp;</P></TD>
+	<TD class="tr1 td1"><P class="p2 ft1">SCHOOL OF ENGINEERING SENIOR DESIGN CONFERENCE</P></TD>
+</TR>
+<TR>
+	<TD class="tr2 td0"><P class="p0 ft0">&nbsp;</P></TD>
+	<TD class="tr2 td1"><P id="conferenceDate" class="p1 ft2">MAY 12, 2016</P></TD>
+</TR>
+<TR>
+	<TD class="tr3 td0"><P class="p0 ft0">&nbsp;</P></TD>
+	<TD class="tr3 td1"><P class="p1 ft1">PROJECT EVALUATION FORM</P></TD>
+</TR>
+<TR>
+	<TD class="tr4 td0"><P class="p0 ft2">Session: <select id="session" onchange=changedSession()></select></P></TD>
+	<TD class="tr4 td1"><P class="p0 ft0">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr2 td0"><P class="p0 ft2">Room #: <textarea id="room#" rows="2" cols="25" disabled style="resize: none"></textarea></P></TD>
+	<TD class="tr2 td1"><P class="p3 ft1">Judge’s Name:<select id="judge" onchange=changeInfo()></select></P></TD>
+</TR>
+</TABLE>
+<P class="p4 ft3">Project Title: <select id="projectTitle" onchange=changedTitle()></select></P>
+<P class="p5 ft3">Group Members:<input type="text" name="GroupMembers" id='groupMembers' value="" size="100" disabled></P>
+<P class="p6 ft3">Advisors: <input type="text" name="Advisors" id ='advisors' value="" size="108.5" disabled></P>
+<P class="p7 ft2">Please evaluate senior engineering design projects and presentations using the following point system:</P>
+<P class="p8 ft4">5 = Excellent (at the level of an <NOBR>entry-level</NOBR> engineer you would hire) </p><P class="p8 ft4">4 = Good (at the level of an accomplished college senior)</P>
+<P class="p9 ft3">3 = Average (at the level typical of a college senior)</P>
+<P class="p10 ft3">2 = Below Average (not up to the expectations for a college senior) </p><P class="p10 ft3">1 = Poor (significant errors or omissions)</P>
+
+<TABLE cellpadding=0 cellspacing=0 class="t1">
+<TR>
+	<TD class="tr0 td2"><P class="p0 ft5">DESIGN PROJECT</P></TD>
+	<TD rowspan=2 class="tr5 td3"><P class="p12 ft2"><input type="text" name="Session" id='DA' class="score" value="" disabled size="10"></P></TD>
+	<TD class="tr0 td4"><P class="p0 ft0">&nbsp;</P></TD>
+	<TD class="tr0 td5"><P class="p0 ft0">&nbsp;</P></TD>
+	<TD rowspan=2 class="tr5 td6"><P class="p13 ft2"><input type="text" name="Session" id='DE' class="score" value="" disabled size="10"></P></TD>
+</TR>
+<TR>
+	<TD class="tr2 td2"><P class="p0 ft3">A. Technical Accuracy</P></TD>
+	<TD colspan=2 class="tr2 td7"><P class="p14 ft3">E. Addresses Project Complexity Appropriately</P></TD>
+</TR>
+<TR>
+	<TD class="tr6 td2"><P class="p0 ft3">B. Creativity and Innovation</P></TD>
+	<TD class="tr6 td3"><P class="p12 ft2"><input type="text" name="Session" id='DB' class="score" value="" disabled size="10"></P></TD>
+	<TD colspan=2 class="tr6 td7"><P class="p14 ft3">F. Expectation of Completion (by term’s end)</P></TD>
+	<TD class="tr6 td6"><P class="p13 ft2"><input type="text" name="Session" id='DF' class="score" value="" disabled size="10"></P></TD>
+</TR>
+<TR>
+	<TD class="tr6 td2"><P class="p0 ft3">C. Supporting Analytical Work</P></TD>
+	<TD class="tr6 td3"><P class="p12 ft2"><input type="text" name="Session" id='DC' class="score" value="" disabled size="10"></P></TD>
+	<TD class="tr6 td8"><P class="p14 ft3">G. Design & Analysis of tests</P></TD>
+	<TD class="tr6 td5"><P class="p0 ft0">&nbsp;</P></TD>
+	<TD class="tr6 td6"><P class="p13 ft2"><input type="text" name="Session" id='DG' class="score" value="" disabled size="10"></P></TD>
+</TR>
+<TR>
+	<TD class="tr6 td2"><P class="p0 ft3">D. Methodical Design Process</P></TD>
+	<TD rowspan=2 class="tr7 td3"><P class="p12 ft2"><input type="text" name="Session" id='DD' class="score" value="" disabled size="10"></P></TD>
+	<TD colspan=2 class="tr6 td7"><P class="p14 ft3">H. Quality of Response during Q&A</P></TD>
+	<TD class="tr6 td6"><P class="p13 ft2"><input type="text" name="Session" id='DH' class="score" value="" disabled size="10"></P></TD>
+</TR>
+<TR>
+	<TD class="tr2 td2"><P class="p15 ft3">Demonstrated</P></TD>
+	<TD class="tr2 td8"><P class="p0 ft0">&nbsp;</P></TD>
+	<TD class="tr2 td5"><P class="p0 ft0">&nbsp;</P></TD>
+	<TD class="tr2 td6"><P class="p0 ft0">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr8 td2"><P class="p0 ft5">PRESENTATION</P></TD>
+	<TD rowspan=2 class="tr9 td3"><P class="p12 ft2"><input type="text" name="Session" id='PA' class="score" value="" disabled size="10"></P></TD>
+	<TD class="tr8 td4"><P class="p0 ft0">&nbsp;</P></TD>
+	<TD class="tr8 td5"><P class="p0 ft0">&nbsp;</P></TD>
+	<TD rowspan=2 class="tr9 td6"><P class="p13 ft2"><input type="text" name="Session" id='PC' class="score" value="" disabled size="10"></P></TD>
+</TR>
+<TR>
+	<TD class="tr2 td2"><P class="p0 ft3">A. Organization</P></TD>
+	<TD class="tr2 td4 td_border"><P class="p14 ft3">C. Visual Aids</P></TD>
+	<TD class="tr2 td5"><P class="p0 ft0">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr10 td2"><P class="p0 ft3">B. Use of Allotted Time</P></TD>
+	<TD class="tr10 td3"><P class="p12 ft2"><input type="text" name="Session" id='PB' class="score" value="" disabled size="10"></P></TD>
+	<TD class="tr10 td4 td_border"><P class="p14 ft3">D. Confidence and Poise</P></TD>
+	<TD class="tr10 td5"><P class="p0 ft0">&nbsp;</P></TD>
+	<TD class="tr10 td6"><P class="p13 ft2"><input type="text" name="Session" id='PD' class="score" value="" disabled size="10"></P></TD>
+</TR>
+<TR>
+	<TD colspan=3 class="tr8 td9"><P class="p16 ft2">GRAND TOTAL (Sum of Design Project and Presentation Totals):</P></TD>
+	<TD class="tr8 td5"><P class="p17 ft5"><input type="text" name="GrandTotal" id="GrandTotal" value="0" style="font-weight: bold" disabled ></P></TD>
+	<TD class="tr8 td6"><P class="p0 ft0">&nbsp;</P></TD>
+</TR>
+</TABLE>
+<P class="p7 ft3">Please select each of the following considerations that were addressed by the presentation:</P>
+<TABLE cellpadding=0 cellspacing=0 class="t2">
+<TR>
+	<TD class="tr11 td10"><P class="p18 ft3"><label><input type="checkbox" id="economic" name="considerations" value="economic" disabled>economic</label></P></TD>
+	<TD class="tr11 td11"><P class="p19 ft3"><label><input type="checkbox" id="environmental" name="considerations" value="environmental" disabled>environmental</label></P></TD>
+	<TD class="tr11 td12"><P class="p0 ft3"><label><input type="checkbox" id="sustainability" name="considerations" value="sustainability" disabled>sustainability</label></P></TD>
+	<TD class="tr11 td13"><P class="p0 ft3"><label><input type="checkbox" id="manufacturability" name="considerations" value="manufacturability" disabled>manufacturability</label></P></TD>
+	<TD class="tr11 td14"><P class="p0 ft0">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr12 td10"><P class="p18 ft3"><label><input type="checkbox" id="ethical" name="considerations" value="ethical" disabled>ethical</label></P></TD>
+	<TD class="tr12 td11"><P class="p19 ft3"><label><input type="checkbox" id="healthandsafety" name="considerations" value="health" disabled>health and safety</label></P></TD>
+	<TD class="tr12 td12"><P class="p0 ft3"><label><input type="checkbox" id="social" name="considerations" value="social" disabled>social</label></P></TD>
+	<TD class="tr12 td13"><P class="p0 ft3"><label><input type="checkbox" id="political" name="considerations" value="political" disabled>political</label></P></TD>
+	<TD class="tr12 td14"><P class="p0 ft0">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD colspan=4 class="tr3 td15"><P class="p0 ft3">Comments (Optional): </P></TD>
+</TR>
+</TABLE>
+<P class="p20 ft6"><textarea id="comments" rows="4" cols="115" disabled></textarea></P>
+</DIV>
+</BODY>
+</HTML>

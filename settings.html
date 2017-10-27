@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="X-UA-Compatible" content="IE=8">
+<TITLE>Settings</TITLE>
+<link rel="stylesheet" type="text/css" href="settings.css">
+<script src="jquery-3.1.1.min.js"></script>
+<script src="md5.min.js"></script>
+<script src="settings.js"></script>
+</HEAD>
+
+<BODY onload="initialization()">
+    <div class="login-page">
+  <div class="form">
+      <button type="button" onclick="clearEvaluations();">Clear Evaluations</button>
+      <button type="button" onclick="clearProjects();">Clear Projects</button>
+      <button type="button" onclick="clearAll();">Clear All</button>
+      <hr>
+      <button type="button" onclick="changeDate();">Change Conference Date</button>
+      <p>
+      <input id="newPresentations" type="file" name="newPresentations" accept=".csv"/>
+      <button type="button" onclick="upload();">Upload New Presentations (.CSV file)</button>
+      <button type="button" onclick="getTemplate();">Download .csv Template</button>
+      <button type="button" onclick="getCode();">Download Presentation Code</button>
+      <hr>
+      <button type="button" onclick="changePassword();">Change Password</button>
+      <hr>
+      <button type="button" onclick="back();">Back</button>
+  </div>
+</div>
+</BODY>
+</HTML>

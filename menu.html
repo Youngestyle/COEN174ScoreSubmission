@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="X-UA-Compatible" content="IE=8">
+<TITLE>Menu</TITLE>
+<link rel="stylesheet" type="text/css" href="menu.css">
+<script src="jquery-3.1.1.min.js"></script>
+<script src="menu.js"></script>
+</HEAD>
+
+<BODY onload="initialization()">
+    <div class="login-page">
+  <div class="form">
+    <IMG src="scu-engineering-school-logo.gif" alt="LOGO" style="width:100px">
+    <p>
+      <button type="button" onclick="individualReport();">Individual Report</button>
+      <hr>
+        <p>Session Report</p>
+          <select id="session"></select>
+          <p>
+      <button type="button" onclick="sessionReport();">Generate</button>
+      <hr>
+      <button type="button" onclick="settings();">Settings</button>
+      <hr>
+      <button type="button" onclick="logOut();">Logout</button>
+  </div>
+</div>
+</BODY>
+</HTML>
